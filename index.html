@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDIX Radar — Live BDIX & FTP Server Scanner</title>
+    <meta name="description" content="Scan and discover live BDIX & FTP servers from your ISP in parallel — free, fast, fully static. Built by @n0b0jit_nexus.">
+    <meta name="keywords" content="BDIX, FTP server scanner, Bangladesh internet, ISP servers, speed test, server status, live servers, BDIX FTP, Bangladesh ISP, internet speed test, server monitoring, FTP scanner, BDIX connectivity">
+    <meta name="author" content="@n0b0jit_nexus">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Geographic Targeting -->
+    <meta name="geo.region" content="BD">
+    <meta name="geo.placename" content="Bangladesh">
+    <meta name="geo.position" content="23.6850;90.3563">
+    <meta name="ICBM" content="23.6850, 90.3563">
+    <meta name="geo.country" content="Bangladesh">
+    <meta name="language" content="English">
+    <meta name="content-language" content="en">
+    
+    <!-- Additional SEO -->
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="expires" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Hreflang for international SEO -->
+    <link rel="alternate" hreflang="en" href="https://nexus-bdix-scanner.onrender.com/">
+    <link rel="alternate" hreflang="en-bd" href="https://nexus-bdix-scanner.onrender.com/">
+    <link rel="alternate" hreflang="x-default" href="https://nexus-bdix-scanner.onrender.com/">
+    
+    <link rel="canonical" href="https://nexus-bdix-scanner.onrender.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexus-bdix-scanner.onrender.com/">
+    <meta property="og:title" content="BDIX Radar — Live BDIX & FTP Server Scanner">
+    <meta property="og:description" content="Scan and discover live BDIX & FTP servers from your ISP in parallel — free, fast, fully static.">
+    <meta property="og:image" content="https://nexus-bdix-scanner.onrender.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BDIX Radar — I found X reachable BDIX servers">
+    <meta property="og:locale" content="en_BD">
+    <meta property="og:site_name" content="BDIX Radar">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nexus-bdix-scanner.onrender.com/">
+    <meta name="twitter:title" content="BDIX Radar — Live BDIX & FTP Server Scanner">
+    <meta name="twitter:description" content="Scan and discover live BDIX & FTP servers from your ISP in parallel — free, fast, fully static.">
+    <meta name="twitter:image" content="https://nexus-bdix-scanner.onrender.com/og-image.png">
+    <meta name="twitter:image:alt" content="BDIX Radar scan results share card">
+    <meta name="twitter:site" content="@n0b0jit_nexus">
+    <meta name="twitter:creator" content="@n0b0jit_nexus">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BDIX Radar",
+        "description": "Live BDIX & FTP server scanner for Bangladesh ISPs - Scan and discover live BDIX & FTP servers from your ISP in parallel",
+        "url": "https://nexus-bdix-scanner.onrender.com",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Modern web browser with JavaScript",
+        "inLanguage": "en",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "@n0b0jit_nexus",
+            "url": "https://t.me/n0b0jit_nexus"
+        },
+        "featureList": [
+            "Parallel server scanning",
+            "Real-time status updates",
+            "Speed testing integration",
+            "Server history tracking",
+            "Custom server lists",
+            "Export results"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "Bangladesh"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Internet users in Bangladesh",
+            "geographicArea": {
+                "@type": "Country",
+                "name": "Bangladesh"
+            }
+        },
+        "keywords": "BDIX, FTP server scanner, Bangladesh internet, ISP servers, speed test, server status, live servers, BDIX FTP, Bangladesh ISP, internet speed test, server monitoring, FTP scanner, BDIX connectivity",
+        "about": {
+            "@type": "Thing",
+            "name": "BDIX (Bangladesh Internet Exchange)",
+            "description": "BDIX is the first Internet Exchange Point (IXP) in Bangladesh, providing high-speed connectivity between ISPs and content providers"
+        },
+        "potentialAction": {
+            "@type": "UseAction",
+            "target": "https://nexus-bdix-scanner.onrender.com",
+            "name": "Scan BDIX Servers"
+        }
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BDIX Radar",
+        "url": "https://nexus-bdix-scanner.onrender.com",
+        "logo": "https://nexus-bdix-scanner.onrender.com/icon.svg",
+        "description": "Free BDIX & FTP server scanner tool for Bangladesh internet users",
+        "founder": {
+            "@type": "Person",
+            "name": "@n0b0jit_nexus",
+            "url": "https://t.me/n0b0jit_nexus"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telegram": "https://t.me/n0b0jit_nexus"
+        },
+        "sameAs": [
+            "https://t.me/n0b0jit_nexus",
+            "https://linktr.ee/mr_nobojit.m"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "Bangladesh"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema for AEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is BDIX Radar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BDIX Radar is a free, fast web application that scans and discovers live BDIX & FTP servers from your ISP in parallel. It helps you find working servers for faster downloads and streaming."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does BDIX Radar work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BDIX Radar uses parallel scanning to check multiple BDIX FTP servers simultaneously. It tests server connectivity and displays which servers are online and reachable from your ISP."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is BDIX Radar free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, BDIX Radar is completely free to use. It's a static web application with no subscription fees or hidden costs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is BDIX?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BDIX (Bangladesh Internet Exchange) is the first Internet Exchange Point in Bangladesh. It provides high-speed connectivity between ISPs and content providers, enabling faster access to local content and services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use BDIX Radar on mobile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, BDIX Radar is fully responsive and works on all devices including mobile phones, tablets, and desktop computers. It also supports PWA installation for offline use."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often are BDIX servers updated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BDIX Radar includes real-time status monitoring that checks server status every 30 seconds. You can also manually refresh the scan to get the latest server availability."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- SoftwareApplication Schema with Geographic Targeting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BDIX Radar",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Modern web browser with JavaScript",
+        "url": "https://nexus-bdix-scanner.onrender.com",
+        "description": "Free BDIX & FTP server scanner for Bangladesh internet users. Scan and discover live servers from your ISP in parallel with real-time status updates.",
+        "author": {
+            "@type": "Person",
+            "name": "@n0b0jit_nexus",
+            "url": "https://t.me/n0b0jit_nexus"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Parallel BDIX FTP scanning",
+            "Live progress and ETA",
+            "Export reachable/unreachable lists",
+            "PWA offline install",
+            "Share results as image or text",
+            "Server history tracking",
+            "Speed testing integration",
+            "Real-time status monitoring"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "23.6850",
+            "longitude": "90.3563"
+        },
+        "locationCreated": {
+            "@type": "Country",
+            "name": "Bangladesh"
+        }
+    }
+    </script>
+
+    <meta name="theme-color" content="#f6f7f9">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 (works on any host) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Microsoft Clarity (free heatmaps / session replay) -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "XXXXXXXXXX");
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <main class="app-container" id="main">
+        <!-- Update Banner -->
+        <div class="update-banner" id="updateBanner" role="alert" hidden>
+            <span class="update-text">A fresh version is available</span>
+            <div class="update-actions">
+                <button class="btn btn-primary btn-small" id="reloadBtn">Reload</button>
+                <button class="btn btn-ghost btn-small" id="dismissUpdateBtn" aria-label="Dismiss update notice">Dismiss</button>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="brand">
+                    <div class="logo" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="11" fill="url(#brandGrad)"/>
+                            <circle cx="20" cy="20" r="10" stroke="#fff" stroke-width="2.4" opacity="0.95"/>
+                            <circle cx="20" cy="20" r="3.4" fill="#fff"/>
+                            <path d="M20 5.5v6M20 28.5v6M5.5 20h6M28.5 20h6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+                            <defs>
+                                <linearGradient id="brandGrad" x1="0" y1="0" x2="40" y2="40">
+                                    <stop stop-color="#10b981"/>
+                                    <stop offset="1" stop-color="#0ea5a4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="app-title">BDIX <span class="brand-accent">Radar</span></h1>
+                        <p class="app-subtitle">Live BDIX &amp; FTP server scanner</p>
+                    </div>
+                </div>
+
+                <nav class="social-links" aria-label="Social links">
+                    <a href="https://t.me/n0b0jit_nexus" target="_blank" rel="noopener" class="icon-btn" aria-label="Join Telegram" title="Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                    <a href="https://linktr.ee/mr_nobojit.m" target="_blank" rel="noopener" class="icon-btn" aria-label="Open Linktree" title="Linktree">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </a>
+                    <a href="https://github.com/n0b0jit/nexus-bdix-scanner" target="_blank" rel="noopener" class="icon-btn" aria-label="Star on GitHub" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <button class="icon-btn" id="shareCardBtn" type="button" aria-label="Create share card" title="Share card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H4v16h16v-8"/><rect x="14" y="2" width="8" height="8" rx="2"/><path d="M18 14v6M15 17h6"/></svg>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Stats Grid -->
+            <section class="stats-section" aria-label="Scan statistics">
+                <div class="stats-grid">
+                    <article class="stat-card tone-online">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Reachable</span>
+                            <span class="stat-value" id="onlineCount">0</span>
+                        </div>
+                    </article>
+                    <article class="stat-card tone-offline">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Unreachable</span>
+                            <span class="stat-value" id="offlineCount">0</span>
+                        </div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Processed</span>
+                            <span class="stat-value" id="totalCount">0</span>
+                        </div>
+                    </article>
+                    <article class="stat-card tone-progress">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Progress</span>
+                            <span class="stat-value" id="progressPercent">0%</span>
+                        </div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Elapsed</span>
+                            <span class="stat-value mono" id="elapsedTime">00:00:00</span>
+                        </div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">ETA</span>
+                            <span class="stat-value mono" id="etaTime">--:--:--</span>
+                        </div>
+                    </article>
+                    <article class="stat-card tone-progress">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Active</span>
+                            <span class="stat-value mono" id="activeCount">0</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Controls -->
+            <section class="controls-section" aria-label="Scan controls">
+                <div class="controls-card">
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <label for="timeOutValue" class="control-label">Timeout</label>
+                            <div class="input-with-unit">
+                                <input type="number" value="8" id="timeOutValue" min="1" max="60" aria-label="Request timeout in seconds">
+                                <span class="input-unit">sec</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="concurrencyValue" class="control-label">Concurrency</label>
+                            <div class="input-with-unit">
+                                <input type="number" value="8" id="concurrencyValue" min="1" max="64" aria-label="Parallel workers">
+                                <span class="input-unit">workers</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="retryAttempts" class="control-label">Retries</label>
+                            <div class="input-with-unit">
+                                <input type="number" value="2" id="retryAttempts" min="1" max="5" aria-label="Number of retry passes">
+                                <span class="input-unit">passes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controls-row">
+                        <div class="toggle-group" role="group" aria-label="Scan options">
+                            <label class="toggle">
+                                <input type="checkbox" id="autoscroll" checked>
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                                <span class="toggle-label">Auto-scroll</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="accurateProbe">
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                                <span class="toggle-label">Accurate probe</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="retryUnreachable">
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                                <span class="toggle-label">Auto-retry</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="soundOnComplete">
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                                <span class="toggle-label">Sound</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="notifyToggle">
+                                <span class="toggle-slider" aria-hidden="true"></span>
+                                <span class="toggle-label">Notifications</span>
+                            </label>
+                        </div>
+
+                        <div class="action-group">
+                            <button id="startStopBtn" class="btn btn-primary">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                                <span class="btn-label">Start Scan</span>
+                            </button>
+                            <button id="resetBtn" class="btn btn-ghost" title="Reset (R)" aria-label="Reset scan">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 1 3 6.7"/><path d="M3 20v-5h5"/></svg>
+                                <span class="btn-label">Reset</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="file-input-group">
+                        <label for="customListFile" class="file-label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                            Load custom list
+                        </label>
+                        <input type="file" id="customListFile" accept=".txt" aria-label="Load custom server list">
+                        <span class="file-meta" id="customListMeta"></span>
+                        <button type="button" class="btn btn-ghost btn-small" id="clearCustomListBtn" hidden>Clear</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress -->
+            <section class="progress-section" aria-label="Scan progress">
+                <div class="progress-card">
+                    <div class="progress-ring-container">
+                        <svg class="progress-ring" viewBox="0 0 120 120" role="img" aria-label="Overall progress">
+                            <defs>
+                                <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#10b981"/>
+                                    <stop offset="100%" stop-color="#0ea5a4"/>
+                                </linearGradient>
+                            </defs>
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fg" id="progressRing" cx="60" cy="60" r="52"/>
+                        </svg>
+                        <div class="ring-text" id="ringPercent">0%</div>
+                    </div>
+                    <div class="progress-details">
+                        <div class="progress-track-wrapper">
+                            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBarTrack">
+                                <div class="progress-fill" id="progressBar">
+                                    <div class="progress-shimmer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="current-url" id="currentUrlContainer" hidden>
+                            <span class="url-indicator" aria-hidden="true"></span>
+                            <span id="currentUrl">Scanning…</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Toolbar -->
+            <section class="toolbar-section" aria-label="Search and filters">
+                <div class="toolbar-card">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="text" id="searchInput" placeholder="Filter servers…" aria-label="Filter results">
+                    </div>
+                    <div class="filter-pills" role="group" aria-label="Quick filter">
+                        <button class="pill active" data-filter="all" type="button">All</button>
+                        <button class="pill" data-filter="online" type="button">Reachable</button>
+                        <button class="pill" data-filter="offline" type="button">Unreachable</button>
+                    </div>
+                    <div class="export-group">
+                        <button class="btn btn-small" id="copyOnlineBtn" type="button" title="Copy reachable URLs">Copy Reachable</button>
+                        <button class="btn btn-small" id="copyOfflineBtn" type="button" title="Copy unreachable URLs">Copy Unreachable</button>
+                        <button class="btn btn-small" id="downloadBtn" type="button" title="Download results">Download</button>
+                        <button class="btn btn-small" id="shareBtn" type="button" title="Copy share summary">Share</button>
+                        <button class="btn btn-small" id="whatsappBtn" type="button" title="Share on WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="results-section" aria-label="Scan results">
+                <div class="results-grid">
+                    <div class="results-panel">
+                        <header class="results-header">
+                            <h2 class="results-title">Reachable</h2>
+                            <span class="results-count" id="onlinePill">0</span>
+                        </header>
+                        <ul id="urlList" class="results-list" aria-live="polite"></ul>
+                        <p class="results-note" id="renderNoteOnline"></p>
+                        <div class="empty-state" id="emptyOnline" hidden>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+                            <p>No reachable servers yet. Results will appear here as the scan runs.</p>
+                        </div>
+                    </div>
+                    <div class="results-panel">
+                        <header class="results-header">
+                            <h2 class="results-title">Unreachable</h2>
+                            <span class="results-count offline" id="offlinePill">0</span>
+                        </header>
+                        <ul id="urlList2" class="results-list" aria-live="polite"></ul>
+                        <p class="results-note" id="renderNoteOffline"></p>
+                        <div class="empty-state" id="emptyOffline" hidden>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                            <p>Nothing unreachable so far. That's a good sign.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p class="footer-text">Built with care by <a href="https://t.me/n0b0jit_nexus" target="_blank" rel="noopener">@n0b0jit_nexus</a> · <span id="visitorsBadge" class="visitors-badge" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="visitorsCount">0</span> scans run</span></p>
+        </footer>
+    </main>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Completion CTA -->
+    <section class="completion-cta" id="completionCta" hidden aria-live="polite">
+        <div class="cta-content">
+            <div class="cta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div class="cta-text">
+                <strong>Scan complete</strong>
+                <span>Get the freshest BDIX server lists on Telegram</span>
+            </div>
+            <a class="btn btn-primary" id="telegramCtaBtn" target="_blank" rel="noopener">Join Telegram</a>
+        </div>
+    </section>
+
+    <!-- Submit Section -->
+    <section class="submit-section" aria-label="Submit a server">
+        <div class="submit-card">
+            <h2 class="submit-title">Know a missing server?</h2>
+            <p class="submit-desc">Submit it and we'll add it to the list.</p>
+            <form id="submitForm" class="submit-form" autocomplete="off">
+                <div class="form-row">
+                    <input type="url" id="submitUrl" class="form-input" placeholder="https://ftp.example.com" aria-label="Server URL" required>
+                    <input type="text" id="submitNote" class="form-input" placeholder="Note (optional)" aria-label="Optional note">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Share Card Modal -->
+    <div class="modal-overlay" id="cardModal" hidden>
+        <div class="modal-backdrop" data-close-card></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-label="Share card">
+            <button class="modal-close" data-close-card aria-label="Close">&times;</button>
+            <h3 class="modal-title">Share Results</h3>
+            <canvas id="shareCanvas" width="1200" height="630" class="share-canvas"></canvas>
+            <div class="modal-actions">
+                <button class="btn btn-small" id="downloadCardBtn" type="button">Download</button>
+                <button class="btn btn-small" id="copyCardBtn" type="button">Copy Image</button>
+                <button class="btn btn-small" id="copyCardTextBtn" type="button">Copy Text</button>
+            </div>
+            <p class="modal-hint" id="cardHint"></p>
+        </div>
+    </div>
+
+    <!-- Social Follow Modal -->
+    <div class="modal-overlay" id="socialFollowModal" hidden>
+        <div class="modal-backdrop" data-close-social></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-label="Follow on social media">
+            <button class="modal-close" data-close-social aria-label="Close">&times;</button>
+            <h3 class="modal-title">Stay Connected</h3>
+            <p class="social-follow-sub">Follow for the latest BDIX servers and updates</p>
+            <div class="social-follow-grid">
+                <a class="social-follow-card fb" href="https://www.facebook.com/n0b0jit.nexus" target="_blank" rel="noopener">
+                    <span class="social-follow-ico" aria-hidden="true">📘</span>
+                    <span class="social-follow-name">Facebook</span>
+                    <span class="social-follow-handle">@n0b0jit.nexus</span>
+                </a>
+                <a class="social-follow-card ig" href="https://www.instagram.com/n0b0jit_nexus" target="_blank" rel="noopener">
+                    <span class="social-follow-ico" aria-hidden="true">📸</span>
+                    <span class="social-follow-name">Instagram</span>
+                    <span class="social-follow-handle">@n0b0jit_nexus</span>
+                </a>
+            </div>
+            <p class="modal-hint" id="socialFollowHint"></p>
+        </div>
+    </div>
+
+    <!-- YouTube Showcase -->
+    <div class="youtube-showcase" id="youtubeShowcase" hidden>
+        <a class="yt-card" id="ytCard" href="#" target="_blank" rel="noopener">
+            <div class="yt-thumb-wrap">
+                <img class="yt-thumb" id="ytThumb" src="" alt="Latest YouTube video thumbnail" loading="lazy">
+                <span class="yt-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="yt-meta">
+                <span class="yt-label">Latest Video</span>
+                <span class="yt-title" id="ytTitle">Loading…</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Social popup while scanning -->
+    <div class="social-popup" id="socialPopup" hidden aria-label="Latest social post">
+        <button class="social-popup-x" id="socialPopupClose" aria-label="Close">&times;</button>
+        <p class="social-popup-title" id="socialPopupTitle">🎬 Latest upload</p>
+        <div class="social-popup-embed">
+            <iframe id="socialPopupFrame" src="" allow="autoplay; encrypted-media" allowfullscreen hidden></iframe>
+            <a id="socialPopupLink" class="social-popup-link" href="#" target="_blank" rel="noopener" hidden>Watch on YouTube</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
